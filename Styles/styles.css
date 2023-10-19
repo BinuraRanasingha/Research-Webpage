@@ -174,7 +174,6 @@ body {margin:0;font-family:Arial}
 	margin-left: 600px;
 	margin-top: -290px;
 	line-height: 1.5;
-	
 }
 
 .ProjectScope figcaption {
@@ -187,5 +186,9 @@ body {margin:0;font-family:Arial}
 }
 
 .ResearchProblem {
+	line-height: 1.5;
+}
+
+.ResearchObjective {
 	line-height: 1.5;
 }
