@@ -125,9 +125,13 @@
 				</div>
 				
 				<div class="Demo">
-					<video width="600" height="360" controls title="This is the video title">
+					<video width="600" height="360" controls>
 						<source src="Video/Product Demo.mp4" type="video/mp4">
 					</video>
+					
+					<div class="video-title">
+						<b>Product Demonstration Video</b>
+					</div>
 				</div>
 			</div>
 			
@@ -240,6 +244,25 @@
 					<i><figcaption>Figure 2: Debt Sustainability Equation.</i></figcaption></center>
 				</div>
 				
+				<p>The Debt-GDP ratio formula is defined as above. Debt-GDP ratio formula includes two additional variables apart from the predicted amounts: Current Aggregate Public
+				Debt and GDP. Since the behavior of GDP and Current Aggregate Public Debt for the following years is unknown to us, they have to be predicted. Hence, separate SARIMA
+				models for Current Aggregate Public Debt and GDP are built. The reason behind the decision to choose the SARIMA model is that SARIMA is better at identifying trends 
+				based on seasonality which is showcased during the pre-processing stage of the data. It was visible that the time series has a seasonality component, hence the SARIMA
+				is selected for its prediction.</p>
+				
+				<h2>Relationship of Inflation and Budgetary Sources</h2>
+				<p>During the investigation, there was no formula that defined the relationship between inflation and budgetary sources. Yet, defining Inflation and Budgetary sources
+				through a formula is an important aspect of the research since it is one of the targets that is used to optimize the amounts, therefore a statistical formula is 
+				defined considering the association between inflation and budgetary sources. Following regression models are built and the model with the best accuracy is taken to 
+				derive the formula. Only linear regression models are used because otherwise coefficients cannot be derived from non-linear regression models.</p>
+				
+				<p>The methodology of building an equation using Regression Analysis was discussed by Gerhard Tintner in the article "SOME APPLICATIONS OF MULTIVARIATE ANALYSIS TO 
+				ECONOMIC DATA". As the author concludes “the choice of whether to use a deterministic or stochastic model depends on the specific problem being studied." In some 
+				cases, a deterministic model may be sufficient. However, in other cases, a statistical model may be necessary to capture the complexity of the economic system”. 
+				Statistical linear models were used to construct weights or coefficients in order to create an association equation between budgetary sources and inflation. Four 
+				regression models were created in accordance with the specification, and the final model was obtained by comparing them to MSE values. Ridge, Linear Regression, 
+				Support Vector Regression (SVR), and Elastic Net. These algorithms were chosen after consideration of their linearity and their propensity to respond to time series 
+				data.</p>
 			</div>
 		</div>
 
