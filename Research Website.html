@@ -263,7 +263,72 @@
 				regression models were created in accordance with the specification, and the final model was obtained by comparing them to MSE values. Ridge, Linear Regression, 
 				Support Vector Regression (SVR), and Elastic Net. These algorithms were chosen after consideration of their linearity and their propensity to respond to time series 
 				data.</p>
-			</div>
+				
+				<h3>Support Vector Regression Model</h3>
+				<p>According to the research financial time series forecasting using independent component analysis and support vector regression SVR is considered a novel neural 
+				network algorithm on top of statistical learning theory and the paper states that this algorithm is getting a lot of attention to solve nonlinear estimation problems.
+				One huge barrier to making this model a win is to make the data well pre-processed as the algorithm is highly vulnerable to noisy data. Also, some other researchers 
+				and journals strongly believe that Support Vector family algorithms could be widely used in the future by providing its capabilities [2][3].</p>
+				
+				<h3>The Ridge Regression Model</h3>
+				<p>The Ridge regression model is used to analyze data that suffer from multicollinearity. It performs L2 regulation and reduces the impact of correlated features on 
+				the coefficients [5]. As experiment research to identify the relationships of budgetary sources with inflation, this algorithm is modeled and compared for the 
+				economic data.</p>
+				
+				<h3> Linear Regression Model</h3>
+				<p>The linear Regression model is a model that is widely used to explore the relationships between the dependent and the independent variables. Identifying the 
+				weights(coefficients) is the primary goal of this part of the research so that this model could be a feasible approach to use and compare with the available economic 
+				data [6].</p>
+				
+				<h3>he Elastic Net Model</h3>
+				<p>In the Elastic Net model, in statistics, and the fitting of linear or logistic regression models, the elastic net is a regularized regression method that linearly 
+				combines the L1 and L2 penalties of the lasso and ridge methods [4].</p>
+				
+				<h3> The Ridge Model</h3>
+				<p>The Ridge model is a model tuning method used to analyze data that suffers from multicollinearity. Also, the Ridge model is considered an extension of a Linear 
+				regression model. Also, it’s a model that has been well used by wiser professionals to do correlation analysis for economic data [7].</p>
+				
+				<div class="Inflation-Formula">
+					<center><img src="Images/Inflation Formula.png">
+					<i><figcaption>Figure 3: Inflation Equation.</i></figcaption></center>
+				</div>
+				
+				<h2>Simulation</h2>
+				<p>This study planned to find a way to optimize the budgetary source amounts through a single algorithm or simulate the target amounts and filter based on the targets
+				defined. During the research study process, many pieces of literature mentioned a simulation named “Monte Carlo Simulation” [24] which had some publications on stock 
+				profile optimization, economic growth forecasting, and obtaining ratios using Monte Carlo Simulation. In further investigating simulation and optimization process 
+				algorithms another simulation method known as “Agent-Based Modelling” which has been used in economics-based research found [25].</p> 
+				
+				<p>Yet, by comparing these two methods, Monte Carlo Simulation is in many publications in the economic domain than Agent-Based Modelling although Agent-Based 
+				Modeling is emerging currently in the economics domain, while Monte Carlo Simulation is commonly discussed in the economics domain. This research started to focus on 
+				Monte Carlo Simulation to reach the research objective of this paper because Agent-Based Modelling depends on the agent and its interaction with the environment which is commonly used in gaming and 
+				environments that are solely based on the agent’s interaction, which is not the purpose of this study. In contrast, this study is more about the probabilistic 
+				approach where the Monte Carlo Simulation is more effective.</p>
+				
+				<p>In the Mote Carlo Simulation, the set of predicted budgetary source amounts, formulas to produce Inflation and debt-to-GDP ratio values for a given set of 
+				budgetary sources, the Current Aggregate Public Debt and GDP values are extracted from SARIMA models and will be fixed during the entire simulation process.</p>
+				
+				<p>Subsequently, the predicted budgetary source amounts are initialized to minimum and maximum; Minimum is considered as 50% of the predicted values, while Maximum is
+				considered as 150% of the predicted budgetary source amount. This is the feasibility constraint explained before.</p>
+				
+				<p>The simulation algorithm concept is defined as follows; Simulation is set to run for 100,000 iterations, and in each iteration, budgetary source amounts are 
+				initialized within the defined thresholds. Subsequently, the amounts are passed to inflation and debt sustainability formulas and obtain the respective inflation and 
+				debt-to-GDP ratios. By the end of the iterations, there will be 100,000 records with inflation and debt-to-GDP ratios with respective budgetary source amounts.</p>
+				
+				<h2>Optimization</h2>
+				<p>This section focuses on filtering the generated data frame based on the defined targets. In this study, the inflation rate and debt-GDP ratio are taken as inputs 
+				and subsequently, the result will be given. Just giving the inflation rate will not provide any results since there might not be inflation rates that are identical to 
+				that. Therefore, in the algorithm, the inflation target is taken as a range, where the lower bound is 0.01 less than the input ratio while the upper bound is 0.01 more
+				than the input ratio. Based on that set of budgetary source amounts, inflation rates, and debt-GDP ratio will be generated and that will be further filtered by 
+				considering the minimum inflation and Debt-GDP ratio amounts. This helps to derive the optimum budgetary source amounts for that particular year. Using those amounts 
+				the proportion of budgetary sources can be derived and subsequently it can be used to identify the optimum budgetary source amounts including monetary financing 
+				amount for a given expenditure amount. Below is the summarized diagram of the entire optimization process.</p>
+				
+				<div class="Optimization-Algorithm">
+					<center><img src="Images/Optimization Algorithm.png">
+					<i><figcaption class="OptiFig">Figure 3: The Optimization Algorithm in High Level</i></figcaption></center>
+				</div>
+			</div> 
 		</div>
 
 		<script>

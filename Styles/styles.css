@@ -227,3 +227,7 @@ body {margin:0;font-family:Arial}
 .Demo:hover .video-title {
     opacity: 1;
 }
+
+.OptiFig {
+	margin-left: -250px;
+}
