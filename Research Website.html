@@ -125,7 +125,7 @@
 				</div>
 				
 				<div class="Demo">
-					<video width="600" height="360" controls>
+					<video width="600" height="360" controls title="This is the video title">
 						<source src="Video/Product Demo.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -150,6 +150,96 @@
 			<div class="method">
 				<br>
 				<h1>Methodology</h1>
+				<p>This study focuses on generating optimized ratios of budgetary sources for a given expenditure amount. While finding the optimum amount, the feasibility factor is
+				taken into consideration, therefore upper and lower thresholds need to be defined in this study. As a general scenario, in this study, the upper threshold is taken as 
+				150% of the previous year's amount and the lower threshold is 50% of the previous year’s amount. This can be changed accordingly. Because of this feasibility 
+				constraint, without assigning random values of budgetary sources to the optimization algorithm the study focuses on assigning predicted amounts based on the 
+				historical data using time series models. As this study only focuses on finding the optimum monetary financing amount, the documentation explains the methodology of 
+				predicting the monetary financing amount for the following years</p>
+				
+				<h2>Time Series Models</h2>
+				<p>Four time series modes including three statistical models and a neural network model, are used to predict the monetary financing for the following years and the 
+				model with the best accuracy is selected for predictions. The dataset for the models was acquired from the Central Bank of Sri Lanka (CBSL) [19].</p>
+				
+				<p>Monetary financing is technically referred to as borrowings from the Central Bank. When a government needs money to cover its budget deficit (i.e., when its 
+				expenses exceed its revenues), it may issue government securities like bonds or bills to the financial market. These securities are essentially IOUs from the 
+				government, and investors can purchase them. IOU stands for "I Owe You." It is a written acknowledgment of a debt or a promise to pay a specified amount of money to 
+				another party. In the case of monetary financing, the central bank steps in and buys these government securities directly from the government using newly created 
+				money. This is different from a regular bond market transaction where the securities are sold to private investors [20]. Therefore, from the dataset, the ‘Net 
+				Credit granted to the Government by Central Bank’ column is taken as the monetary financing amount used to finance the government's expenditure over the years.</p>
+				
+				<p>The monetary financing dataset consists of monthly data hence there is no requirement to expand the dataset by dividing it quarterly. However, the data format of 
+				the ‘Month’ column is not consistent, hence it is pre-processed. The ‘Net Credit granted to the Government by Central Bank’ column is standardized in order to make it
+				easy to compare the Mean Squared Error (MSE) values of the models later. Standardization of data is used as a data pre-processing action to improve the performance of
+				machine learning models because it helps to take all the variables into a single scale removing different scales. However, in univariate time series modelling where a
+				single column of data exists this does not make a difference [21]. After pre-processing the data, it is checked to understand its behaviour and it is understood that 1
+				it has a seasonality and trend.</p>
+				
+				<h3>SARIMA Model</h3>
+				<p>A Seasonal Autoregressive Integrated Moving Average (SARIMA) model is a sophisticated time series forecasting method that builds upon the concepts of 
+				Autoregressive Integrated Moving Average (ARIMA) models. SARIMA models are particularly useful when dealing with time series data that exhibit seasonality, trends, 
+				and other complex patterns. When ARIMA is used and the data is non-stationary, it has to be differentiated to make it stationary whereas SARIMA is believed to be 
+				with non-stationary data by itself. However, at times it might not be the case. In this study, it is proven that the SARIMA is not dealing with it by itself. Hence, 
+				the time series is differentiated first and utilizes ACF, PACF plots, and the Autoarima function to derive (p, d, q) (P, D, Q) m values. The Autoarima function 
+				appears to be giving better values when MSE values are checked. When the SARIMA model is trained with standardized data, the MSE value is high compared to the value 
+				when it is trained without standardized data. Hence, for the SARIMA model, the data is not standardized.</p>
+				
+				<h3>LSTM model</h3>
+				<p>Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) designed for time-series predictions. It excels at capturing long-term dependencies and 
+				patterns in sequential data, making it effective for tasks like stock price forecasting, natural language processing, and more. LSTMs use memory cell and gating 
+				mechanisms to control the flow of information, making them capable of learning and remembering patterns over extended sequences, which is challenging for traditional 
+				RNNs. The benefit of using LSTMs for time series forecasting is that they can capture complex patterns, including seasonality, trends, and irregularities, without 
+				relying on simplifying assumptions. Standardized data was utilized for the LSTM model unlike in SARIMA model. The model appears to be functioning very well with a 
+				good MSE value.</p>
+				
+				<h3>FB Prophet Model</h3>
+				<p>Prophet is a forecasting tool developed by Facebook for time series predictions. It is designed to handle daily observations that display patterns on different 
+				time scales, including holidays and special events. Prophet is user-friendly and requires minimal data pre-processing, making it a valuable tool for quick and 
+				accurate time series forecasting in various domains. It is believed to handle seasonality automatically, however, in this study, it appears that it does not handle 
+				the seasonality by itself. Hence, the seasonality is given manually as 12 since it is visible that the time series has seasonality 12 months apart. Standardized data 
+				was utilized for this model.</p>
+				
+				<h3>Exponential Smoothing (Holt-Winters) Model</h3>
+				<p>The Holt-Winters Exponential Smoothing model is another popular method for time series forecasting. It considers three components in the data: level (average), 
+				trend (directional movement), and seasonality (repeating patterns). By exponentially weighting past observations, it adapts to changes in these components over time. 
+				This model is effective for capturing and predicting data with consistent patterns and trends, making it valuable for forecasting in business and economics. 
+				Standardized data was used for this model.</p>
+				
+				<h3>ARIMA Model</h3>
+				<p>ARIMA, or AutoRegressive Integrated Moving Average, is a powerful time series modeling technique, especially valued in economics. It combines three key components: AutoRegression (AR) - which considers past values to predict future 
+				ones, Moving Average (MA) - which analyzes past prediction errors, and Integration (I) - a differencing process to make a series stationary. What makes ARIMA special 
+				is its ability to capture complex temporal patterns, trends, and seasonality in economic data. This versatility enables economists to model and forecast a wide 
+				range of economic phenomena, from stock prices to GDP trends, making it a fundamental tool for understanding and predicting economic fluctuations and trends [22].</p>
+				
+				<h3>GARCH Model</h3>
+				<p>GARCH, or Generalized Autoregressive Conditional Heteroskedasticity, is a specialized time series model widely used in economics for modeling and forecasting 
+				financial volatility. What makes GARCH special is its ability to capture the dynamic nature of volatility in financial markets, where the level of risk changes over 
+				time. Unlike traditional models that assume constant volatility, GARCH recognizes that volatility clusters during turbulent periods and subsides during calm ones. 
+				This feature is crucial in economics because it allows analysts to better understand and predict the risk associated with financial assets, aiding in risk management,
+				option pricing, and portfolio optimization. In essence, GARCH is a powerful tool for modeling the complex and changing nature of uncertainty in economic and financial 
+				data [23].</p>
+				
+				<p>Using the best model for budgetary source amounts are predicted for the following years. Subsequently, the predicted budgetary source amounts have to be optimized.
+				In this study, a simulation and an optimization algorithm are used to do the optimization. In the simulation random set of budgetary source amounts and relevant 
+				macroeconomic variable values are generated according to given relationships and constraints. Considering the feasibility factor, in this study, the budgetary source 
+				amount of the following year cannot be lower or greater than a certain threshold of the previous year’s amount of that respective source. The upper threshold is taken
+				as 150% of the previous year’s amount and the lower threshold is 50% of that amount. This threshold can be changed accordingly. Random source amounts are generated 
+				using the simulation according to this constraint.</p>
+				
+				<p>The focus of this study is to optimize the predicted source amounts such that Inflation and Debt- GDP ratio targets are met. Only inflation and Debt to GDP ratio
+				are considered when optimizing the budgetary sources because by taking other macroeconomic indicators such as Interest Rates, Unemployment Rate, and Exchange Rate the
+				study will have to consider broader concepts and define equations that could increase the uncertainty of the results. Most importantly this will take time 
+				consequently the research will not be able to be completed within the given period. If a certain amount of monetary financing, tax, foreign borrowing, and domestic 
+				borrowing meet the predefined inflation and debt-to-GDP ratio targets, that is taken as the optimum set of amounts to finance a given expenditure amount. To do this 
+				the relationship between budgetary sources and two macroeconomic indicators have to be identified and included in the simulation. Subsequently, using the identified
+				relationships Inflation and Debt-GDP values have to be calculated through each iteration for given budgetary source amounts.</p>
+				
+				<h2>Debt Sustainability Formula</h2>
+				<div class="Debt_Sus_Formula">
+					<center><img src="Images/Debt Sustainability Formula.png">
+					<i><figcaption>Figure 2: Debt Sustainability Equation.</i></figcaption></center>
+				</div>
+				
 			</div>
 		</div>
 

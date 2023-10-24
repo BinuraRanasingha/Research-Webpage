@@ -206,3 +206,8 @@ body {margin:0;font-family:Arial}
 	margin-left: 700px;
 	margin-top: -619px;
 }
+
+.method {
+	line-height: 1.5;
+	text-align: justify;
+}
