@@ -234,18 +234,24 @@ body {margin:0;font-family:Arial}
 
 .Technologies {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 }
 
-.TechImages {
-    width: 130px; /* Set the desired width and height for the circular frame */
-    height: 130px;
+.Technologies .logoframe  {
+    width: 100px; /* Set the desired width and height for the circular frame */
+    height: 100px;
     border-radius: 50%; /* Create a circular shape with 50% border-radius */
     overflow: hidden; /* Hide any parts of the image that exceed the circular frame */
-	margin-right:50px;
+	margin:10px;
+	/*border: 2px solid black;*/
+	padding: 25px;
+	background: #f2f2f2;
+	
 }
 
-.TechImages img {
-    width: 100%; /* Make the image fill the circular frame */
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the circular frame */
+.logoframe img {
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
 }
