@@ -373,9 +373,14 @@ body {margin:0;font-family:Arial}
   /*display: inline-block;*/
   /*margin-right: 10px;*/
   padding: 10px;
+  width: 2.5%;
 }
 
 .card-content {
 	flex: 1;
 	padding: 10px;
+	width: 50%;
+	/*background: blue;*/
+	margin-left: 6%;
+	margin-top: -45px; 
 }
