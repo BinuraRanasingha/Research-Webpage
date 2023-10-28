@@ -145,7 +145,7 @@ body {margin:0;font-family:Arial}
 .arrow {
     position: absolute;
     right: 45%; /* Adjust the position of the arrow as needed */
-    top: 52%;
+    top: 52.5%;
     transform: translateY(-50%);
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Add a smooth transition effect */
