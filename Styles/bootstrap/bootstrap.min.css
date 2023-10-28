@@ -316,6 +316,24 @@ select:disabled {
     opacity: 1
 }
 
+svg::not(:root).svg-inline--fa {
+	overflow: visible;
+}
+
+.svg-inline--fa.fa-w-12 {
+	width: 0.75em;
+}
+
+.mr-2, .mx-2 {
+	margin-right: 0.5rem!important;
+}
+
+.svg-inline--fa {
+	display: inline-block;
+	font-size: inherit;
+	height: 1em;
+}
+
 [list]::-webkit-calendar-picker-indicator {
     display: none
 }
@@ -333,9 +351,13 @@ select:disabled {
     border-style: none
 }
 
-div.timeline .row * {
-	box-sizing: border-box;
+/* Apply to elements inside .specific-timeline with the .row class */
+div.downloads div.docs div.row *,
+div.downloads div.docs div.row ::before {
+    box-sizing: border-box;
 }
+
+
 
 textarea {
     resize: vertical
