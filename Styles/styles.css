@@ -358,3 +358,18 @@ body {margin:0;font-family:Arial}
   max-width: 100%;
   height: auto;
 }
+
+.downloads {
+	margin-left: 105px;
+	margin-right: 105px;
+	margin-top: 30px;
+}
+
+.downloads .down {
+	color: #33ccff;
+}
+
+.pdf-logo {
+  display: inline-block;
+  margin-right: 10px;
+}
