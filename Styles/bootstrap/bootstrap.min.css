@@ -333,6 +333,10 @@ select:disabled {
     border-style: none
 }
 
+div.timeline .row * {
+	box-sizing: border-box;
+}
+
 textarea {
     resize: vertical
 }
