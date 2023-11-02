@@ -105,14 +105,13 @@ body {margin:0;font-family:Arial}
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 2000px){
-	.navcontent {
-		float: right;
-		margin-top: -100px;
-		position: fixed;
-		margin-left: 750px;
-	}
+.navcontent {
+	float: right;
+	margin-top: -100px;
+	position: fixed;
+	margin-left: 750px;
 }
+
 
 .logoname {
 	width: 200px;
@@ -144,11 +143,10 @@ body {margin:0;font-family:Arial}
   font-weight: bold;
 }
 
-@media screen and (min-width: 0px) and (max-width: 2000px){
 .arrow {
     position: absolute;
-    right: 45%; /* Adjust the position of the arrow as needed */
-    top: 52.5%;
+    right: 46%; /* Adjust the position of the arrow as needed */
+    top: 42%;
     transform: translateY(-50%);
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Add a smooth transition effect */
