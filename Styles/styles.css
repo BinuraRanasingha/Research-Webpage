@@ -144,6 +144,7 @@ body {margin:0;font-family:Arial}
   font-weight: bold;
 }
 
+@media screen and (min-width: 0px) and (max-width: 2000px){
 .arrow {
     position: absolute;
     right: 45%; /* Adjust the position of the arrow as needed */
