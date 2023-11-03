@@ -395,3 +395,7 @@ body {margin:0;font-family:Arial}
 	margin-right: 105px;
 	margin-top: 30px;
 }
+
+.h-100 .card-img-top {
+	object-fit: cover;
+}
