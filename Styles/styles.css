@@ -403,3 +403,7 @@ body {margin:0;font-family:Arial}
 .supervisor {
 	width: 21%;
 }
+
+a {
+	text-decoration: none;
+}
