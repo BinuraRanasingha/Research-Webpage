@@ -399,3 +399,7 @@ body {margin:0;font-family:Arial}
 .h-100 .card-img-top {
 	object-fit: cover;
 }
+
+.supervisor {
+	width: 21%;
+}
