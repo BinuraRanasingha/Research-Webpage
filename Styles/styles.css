@@ -454,6 +454,6 @@ a {
 
 /* Add this CSS to your existing styles */
 .topnav a.active {
-	color: #ff0000; /* Highlight color */
-	font-weight: bold; /* Make it bold or apply other styles */
+  background-color: black;
+  color: white;
 }

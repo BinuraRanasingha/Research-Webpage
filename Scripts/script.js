@@ -41,11 +41,11 @@ function myFunction() {
 });*/
 
 // Select all navigation links
-const navLinks = document.querySelectorAll(".navcontent a");
-console.log(navLinks);
+//const navLinks = document.querySelectorAll(".navcontent a");
+
 
 // Add click event listeners to the links
-navLinks.forEach(link => {
+/*navLinks.forEach(link => {
 	link.addEventListener("click", function(e) {
 		e.preventDefault(); // Prevent the default link behavior
 
@@ -56,4 +56,49 @@ navLinks.forEach(link => {
 			targetSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the target section smoothly
 		}
 	});
+});*/
+
+$(document).ready(function() {
+
+  // Get the navigation bar element
+  var navBar = $('.topnav');
+
+  // Get all of the section elements
+  var sections = $('section');
+
+  // Add an event listener to the window scroll event
+  $(window).scroll(function() {
+
+    // Get the current scroll position
+    var scrollY = $(window).scrollTop();
+
+    // Loop through the section elements
+    $.each(sections, function(index, section) {
+
+      // Get the top position of the section element
+      var sectionTop = $(section).offset().top;
+
+      // If the scroll position is greater than or equal to the top position of the section element, then highlight the corresponding navigation bar item
+      if (scrollY >= sectionTop) {
+        navBar.find(`a[href="#${section.id}"]`).addClass('active');
+      }
+
+      // Otherwise, remove the active class from the corresponding navigation bar item
+      else {
+        navBar.find(`a[href="#${section.id}"]`).removeClass('active');
+      }
+    });
+  });
 });
+
+// Get the navigation bar elements
+//const navBarElements = document.querySelector('.topnav').querySelectorAll('a');
+
+// Print the navigation bar elements to the console
+/*navBarElements.forEach(element => {
+  console.log(element);
+});*/
+
+
+
+
