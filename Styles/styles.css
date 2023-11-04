@@ -122,7 +122,7 @@ body {margin:0;font-family:Arial}
 	margin-top: 10px;
 }
 
-.home {
+#home {
 	display: block;
 	padding-top: 50px;
 }
@@ -161,7 +161,7 @@ body {margin:0;font-family:Arial}
     opacity: 1; /* Show the arrow on button hover */
 }
 
-.ProjectScope {
+#ProjectScope {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
@@ -182,7 +182,7 @@ body {margin:0;font-family:Arial}
 	text-align: justify;
 }
 
-.ProjectScope figcaption {
+#ProjectScope figcaption {
 	color:#8D8988;
 	width: 550px;
 }
@@ -261,13 +261,13 @@ body {margin:0;font-family:Arial}
     object-fit: contain;
 }
 
-.Milestones {
+#Milestones {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
 }
 
-.Milestones .mile {
+#Milestones .mile {
 	color: #33ccff;
 }
 
@@ -363,13 +363,13 @@ body {margin:0;font-family:Arial}
   height: auto;
 }
 
-.downloads {
+#downloads {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
 }
 
-.downloads .down {
+#downloads .down {
 	color: #33ccff;
 }
 
@@ -393,7 +393,7 @@ body {margin:0;font-family:Arial}
 	color: #33ccff;
 }
 
-.aboutus {
+#aboutus {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
@@ -431,7 +431,7 @@ a {
 	width: 21%;
 }
 
-.contactus {
+#contactus {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
@@ -450,4 +450,10 @@ a {
     background-image: linear-gradient(to left, #52BE80, #196F3D, #52BE80);
 	width: 52%;
 	color:white;
+}
+
+/* Add this CSS to your existing styles */
+.topnav a.active {
+	color: #ff0000; /* Highlight color */
+	font-weight: bold; /* Make it bold or apply other styles */
 }
