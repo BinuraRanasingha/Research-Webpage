@@ -38,12 +38,14 @@ body {margin:0;font-family:Arial}
   border: none;
   outline: none;
   color: black;
-  padding: 14px 16px;
+  padding: 0px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
   cursor: pointer;
 }
+
+
 
 .dropdown-content {
   display: none;
@@ -431,7 +433,7 @@ a {
 	width: 21%;
 }
 
-.contactus {
+.contactussec {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
@@ -456,4 +458,8 @@ a {
 .topnav a.active {
   background-color: black;
   color: white;
+}
+
+.topnav .navcontent .dropdown .dropbtn {
+	background: white;
 }
