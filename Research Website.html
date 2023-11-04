@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="Styles/styles.css">
 	<body>
 		<div class="website">
-			<div class="topnav" id="myTopnav">
+			<div id="myTopnav" class="topnav" >
 				<div class="logoname">
 					<img src="Images/logo.png" width="100" height="100">
 				</div>
@@ -851,41 +851,7 @@
 		</div>
 
 
-		<script>
-			function myFunction() {
-			  var x = document.getElementById("myTopnav");
-			  if (x.className === "topnav") {
-				x.className += " responsive";
-			  } else {
-				x.className = "topnav";
-			  }
-			}
-			
-			document.addEventListener("DOMContentLoaded", function() {
-				// Get all section elements
-				const sections = document.querySelectorAll(".section");
-				
-				// Add an event listener to the window's scroll event
-				window.addEventListener("scroll", function() {
-					let currentSection = "";
-
-					sections.forEach(section => {
-						const sectionTop = section.offsetTop - 100;
-						if (window.scrollY >= sectionTop) {
-							currentSection = section.id;
-						}
-					});
-
-					// Remove any previously highlighted link
-					document.querySelectorAll(".navbar a").forEach(link => {
-						link.classList.remove("active");
-					});
-
-					// Highlight the current section's link
-					document.querySelector(`.navbar a[href="#${currentSection}"]`).classList.add("active");
-				});
-			});
-		</script>
+		<script src="Scripts/scripts.js"></script>
 
 	</body>
 </html>
