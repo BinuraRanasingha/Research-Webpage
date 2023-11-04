@@ -460,6 +460,7 @@ a {
   color: white;
 }
 
-.topnav .navcontent .dropdown .dropbtn {
-	background: white;
+section {
+	min-height: 50vh;
 }
+
