@@ -3,6 +3,9 @@ body {margin:0;font-family:Arial}
 .topnav {
   overflow: hidden;
   background-color: white; /*navigation bar background colour #8D8988*/
+  position: fixed;
+  z-index: 99;
+  width: 100%;
 }
 
 .topnav a {
