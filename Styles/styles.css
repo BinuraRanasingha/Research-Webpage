@@ -161,7 +161,7 @@ body {margin:0;font-family:Arial}
     opacity: 1; /* Show the arrow on button hover */
 }
 
-.ProjectScope {
+.ProjectScopesec {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
@@ -182,7 +182,7 @@ body {margin:0;font-family:Arial}
 	text-align: justify;
 }
 
-#ProjectScope figcaption {
+.ProjectScopesec figcaption {
 	color:#8D8988;
 	width: 550px;
 }
@@ -261,13 +261,13 @@ body {margin:0;font-family:Arial}
     object-fit: contain;
 }
 
-.Milestones {
+.Milestonessec {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
 }
 
-.Milestones .mile {
+.Milestonessec .mile {
 	color: #33ccff;
 }
 
@@ -363,13 +363,13 @@ body {margin:0;font-family:Arial}
   height: auto;
 }
 
-.downloads {
+.downloadssec {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
 }
 
-.downloads .down {
+.downloadssec .down {
 	color: #33ccff;
 }
 
@@ -393,7 +393,7 @@ body {margin:0;font-family:Arial}
 	color: #33ccff;
 }
 
-.aboutus {
+.aboutussec {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
