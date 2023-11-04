@@ -42,6 +42,7 @@ function myFunction() {
 
 // Select all navigation links
 const navLinks = document.querySelectorAll(".navcontent a");
+console.log(navLinks);
 
 // Add click event listeners to the links
 navLinks.forEach(link => {
