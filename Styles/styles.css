@@ -445,10 +445,11 @@ a {
 	margin-left: 105px;
 	margin-right: 105px;
 	margin-top: 30px;
+	padding-left: 45px;
 }
 
 .CU {
-	color: #33ccff;
+	color: #004e8c;
 }
 
 .form-control {
@@ -493,4 +494,17 @@ a {
 
 section.milestones1, section.downloads1 {
 	background-color: #e6ffff;
+}
+
+section.contact1 {
+	min-height: 50vh;
+	background-image: url("../Images/Sri Lankan Rupee.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; /* Optionally, to fix the background image while scrolling */
+	background-position: center; /* Center the background image */
+}
+
+form {
+	padding-left: 45px;
 }
