@@ -491,6 +491,6 @@ a {
 	color: black;
 }
 
-section.milestones1 {
+section.milestones1, section.downloads1 {
 	background-color: #e6ffff;
 }
