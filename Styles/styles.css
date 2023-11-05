@@ -468,3 +468,6 @@ section {
 	min-height: 50vh;
 }
 
+section.home1 {
+	min-height: 100vh;
+}
