@@ -140,12 +140,13 @@ body {
 	height: 60px;
 	width: 200px;
 	border-radius: 10px;
-    /*background-color: #0074d9;*/ /* Button background color */
+    background-color: transparent; /* Button background color */
     color: black; /* Text color */
     border: none; /* Remove button border for a cleaner look */
     cursor: pointer;
 	font-size: 17px;
 	font-family: inherit;
+	border: 1px solid #000;
 	
 }
 
