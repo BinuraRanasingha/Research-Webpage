@@ -471,3 +471,10 @@ section {
 section.home1 {
 	min-height: 100vh;
 }
+
+a {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline by default */
+  /* Add any other styling as needed */
+}
+
