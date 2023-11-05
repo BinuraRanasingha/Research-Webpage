@@ -508,3 +508,18 @@ section.contact1 {
 form {
 	padding-left: 45px;
 }
+
+ table {
+      border-collapse: collapse; /* This removes default spacing between table cells */
+      width: 100%;
+    }
+
+th, td {
+	border: 1px solid #000; /* Add a 1px black border to table headers and data cells */
+	padding: 8px; /* Add padding to headers and data cells for spacing */
+	text-align: left; /* Align text to the left */
+}
+
+.mf, .tr, .db, .fb {
+	text-align: center;
+}
