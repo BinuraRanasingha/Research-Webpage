@@ -1,11 +1,6 @@
 body {
 	margin:0;
 	font-family:Arial;
-	background-image: url("../Images/");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed; /* Optionally, to fix the background image while scrolling */
-	background-position: center; /* Center the background image */
 }
 
 * {
@@ -14,7 +9,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: white; /*navigation bar background colour #8D8988*/
+  background-color: transparent; /*navigation bar background colour #8D8988*/
   position: fixed;
   z-index: 99;
   width: 100%;
@@ -478,11 +473,15 @@ section {
 
 section.home1 {
 	min-height: 100vh;
+	background-image: url("../Images/Sri Lankan Rupee.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; /* Optionally, to fix the background image while scrolling */
+	background-position: center; /* Center the background image */
 }
 
 a {
-  color: inherit; /* Inherit the color from the parent element */
-  text-decoration: none; /* Remove underline by default */
-  /* Add any other styling as needed */
+	color: inherit; /* Inherit the color from the parent element */
+	text-decoration: none; /* Remove underline by default */
 }
 
