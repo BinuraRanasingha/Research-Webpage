@@ -1,5 +1,11 @@
 body {
-	margin:0;font-family:Arial
+	margin:0;
+	font-family:Arial;
+	background-image: url("../Images/");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; /* Optionally, to fix the background image while scrolling */
+	background-position: center; /* Center the background image */
 }
 
 * {
