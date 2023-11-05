@@ -9,7 +9,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: transparent; /*navigation bar background colour #8D8988*/
+  background-color: white; /*navigation bar background colour #8D8988*/
   position: fixed;
   z-index: 99;
   width: 100%;
@@ -486,3 +486,11 @@ a {
 	text-decoration: none; /* Remove underline by default */
 }
 
+.maintitle h1 {
+	font-weight: bold;
+	color: black;
+}
+
+section.milestones1 {
+	background-color: 
+}
